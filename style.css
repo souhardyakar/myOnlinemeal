@@ -1,0 +1,242 @@
+/* CSS RESET */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --navbar-height: 59px;
+}
+/* styling the navbar */
+#navbar{
+    display: flex; /*to make the logo and the list items horizontallly placed to each other*/
+    align-items: center;
+    position: sticky; /*so that navbar does not occupies 100%*/
+    top: 0px;
+}
+#navbar::before{
+        content: "";
+        background-color: black;
+        position: absolute;
+        top:0px;
+        left:0px;
+        height: 100%;
+        width:100%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+
+/* Navigation Bar: Logo and image */
+#logo{
+    margin: 10px;
+    margin-right: 15px;
+}
+/* Navigation Bar: List items */
+#navbar ul{
+    display: flex;
+    font-family: 'Bree Serif', serif;
+}
+#navbar ul li{
+    list-style: none; /*to remove the dots from the list */
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: rgb(255, 255, 255);
+    display: block; /* to add padding*/
+    padding: 5px 30px;
+    border-radius: 20px;
+    text-decoration: none; /*to remove the underline*/
+}
+#navbar ul li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 200px; /*bottom&top left&right*/
+    justify-content: center; /*Align items vertically*/
+    align-items: center; /*Align items horizontally*/
+    height: 440px;
+    /* width: 100%; */
+}
+/* pseudo selectors for background */
+#home::before{
+    content: "";
+    background:url(../bg5.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 640px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    top: 0px;
+    left: 0px;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 3.4rem;
+}
+#home p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+    font-family: 'Bree Serif', serif;
+}
+#services .box{
+    border: 2px solid black;
+    background-color: rgb(208, 208, 208);
+    border-radius: 28px;
+    display: block;
+    margin: 34px ;
+    margin-top: 10px;
+    width: 30%;
+    padding: 10px;
+    /* margin-bottom: 0px; */
+}
+#services .box img{
+    height: 160px;
+    margin: auto; /*For this to work we have to make the display block */
+    display: block;
+}
+.services-container h1{
+    margin-top: 100px;
+    font-size: 3.2rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Client Section */
+#client-section{
+    height: 344px;
+    /* position: relative; */
+    margin-top: 0px;
+}
+#client-section h1{
+    /* position: relative; */
+    margin-top: 0px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url(../bg6.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 340px;
+    z-index: -1;
+    opacity: 0.5;
+}
+#client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 20px;
+}
+#client-section img{
+    height: 144px;
+    /* margin-bottom: 100000px; */
+}
+/* Contact section */
+#contact{
+    /* position: relative; */
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 580px;
+    margin-top: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    background: url(../contact.jpg) no-repeat center center/cover;
+}
+#contact h1{
+    margin-top: 10px; /*distance between client section*/
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 34px; */
+}
+#contact-box input,#contact-box textarea{
+    width: 99%;
+    padding: 0.5rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+#contact-box button{
+    height: 60px;
+    width: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1.6px solid black;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    background: transparent;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+#contact-box button:hover{
+   background-color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size: 3.2rem;
+    padding: 12px;
+    margin-top: 110px;
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary{
+    font-size: 2.1rem;
+    padding: 12px;
+
+}
+.btn{
+    padding: 10px 20px;
+    margin: 20px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    opacity: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+    
+}
+.btn:hover{
+    /* opacity: 0.3; */
+    color: black;
+    cursor: pointer;
+    background-color: white;
+}
+.center{
+    /* horizontally center karne ke liye */
+    text-align: center; 
+}
+footer{
+    background: black;
+    color: white;
+}
